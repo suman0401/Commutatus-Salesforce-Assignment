@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Account Details">
+        <lightning-input-field label="Phone Number" type="phone" name="phoneNumber" value={phoneNumber} onchange={handlePhoneNumberChange}></lightning-input-field>
+        <lightning-input-field label="Date of Birth" type="date" name="dateOfBirth" value={dateOfBirth} onchange={handleDateOfBirthChange}></lightning-input-field>
+        <lightning-input-field label="T-Shirt Size" type="text" name="tShirtSize" value={tShirtSize} onchange={handleTShirtSizeChange}></lightning-input-field>
+        <lightning-input-field label="Shoe Size" type="text" name="shoeSize" value={shoeSize} onchange={handleShoeSizeChange}></lightning-input-field>
+        <lightning-button label="Update Account" onclick={handleUpdateAccount}></lightning-button>
+    </lightning-card>
+</template>

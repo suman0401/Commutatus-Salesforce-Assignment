@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>Email_Alert</flowApiName>
+    <label>Email Alert Test</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;FirstName&quot;:&quot;sdas&quot;,&quot;LastName&quot;:&quot;sdc&quot;,&quot;Name&quot;:&quot;sdas sdc&quot;,&quot;OwnerId&quot;:&quot;0051m000006iRknAAE&quot;,&quot;PersonDoNotCall&quot;:false,&quot;PersonHasOptedOutOfEmail&quot;:false,&quot;PersonHasOptedOutOfFax&quot;:false,&quot;Phone&quot;:&quot;4567891234&quot;,&quot;Profile_Completed__c&quot;:false,&quot;RecordTypeId&quot;:&quot;0121m000002W7PkAAK&quot;,&quot;Salutation&quot;:&quot;Mr.&quot;,&quot;Shoe_size__c&quot;:&quot;6&quot;,&quot;T_Shirt_Size__c&quot;:&quot;XS&quot;}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>User_Email</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

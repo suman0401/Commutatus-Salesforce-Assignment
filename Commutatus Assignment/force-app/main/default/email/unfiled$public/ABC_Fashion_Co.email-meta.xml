@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Emails for users to update the personal data</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>ABC Fashion Co</name>
+    <style>none</style>
+    <subject>Update your Personal Profile</subject>
+    <textOnly>Hi {!Account.Name},  
+
+We hope this email finds you well. As part of our ongoing efforts to ensure the accuracy and security of our user data, we kindly request you to review and update your profile information.  Maintaining up-to-date information is essential for us to provide you with the best possible service and to keep you informed about important updates and personalized offers.  
+
+
+To update your profile, please click the below link</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

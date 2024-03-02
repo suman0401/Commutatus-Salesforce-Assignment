@@ -1,0 +1,50 @@
+<apex:page controller="MaskedLinkController" lightningStylesheets="true" >
+ <apex:slds />
+    <apex:form >
+        <apex:pageBlock title="User Profile">
+        <div class="slds-form slds-form_stacked">
+            <!-- Record ID -->
+            <apex:inputHidden value="{!account.Id}" id="recordId"/> 
+            
+            <!-- Phone Number -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="phoneNumber">Phone Number</label>
+                <div class="slds-form-element__control">
+                    <apex:inputField id="phoneNumber" value="{!account.phone}" styleClass="slds-input" />
+                </div>
+            </div>
+            
+            Date of Birth 
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="dateOfBirth">Date of Birth</label>
+                <div class="slds-form-element__control">
+                    <apex:inputField id="dateOfBirth" value="{!account.PersonBirthdate}" styleClass="slds-input" />
+                </div>
+            </div> 
+            
+            <!-- T-shirt Size -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="tshirtSize">T-shirt Size</label>
+                <div class="slds-form-element__control">
+                    <apex:inputField id="tshirtSize" value="{!account.T_Shirt_Size__c}" styleClass="slds-input" />
+                </div>
+            </div>
+            
+            <!-- Shoe Size -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="shoeSize">Shoe Size</label>
+                <div class="slds-form-element__control">
+                    <apex:inputField id="shoeSize" value="{!account.Shoe_size__c}" styleClass="slds-input" />
+                </div>
+            </div>
+            
+            <!-- Command Button -->
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <apex:commandButton action="{!updateRecord}" value="Update" styleClass="slds-button slds-button_brand" />
+                </div>
+            </div>
+        </div>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>
